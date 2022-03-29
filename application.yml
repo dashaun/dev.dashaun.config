@@ -3,7 +3,7 @@ management:
     enabled-by-default: true
     jmx:
       exposure:
-        include: *
+        include: '*'
     web:
       exposure:
-        include: *
+        include: '*'
