@@ -6,7 +6,7 @@
 
 # dev.dashaun.config
 
-A public repository with example configurations
+Example configuration repository for Spring Cloud Config server
 
 ### Built with:
 
