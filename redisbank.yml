@@ -1,3 +1,7 @@
+spring:
+  redis:
+    ssl: true
+
 stomp:
   port: 443
   protocol: wss
