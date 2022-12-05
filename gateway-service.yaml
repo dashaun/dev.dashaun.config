@@ -1,0 +1,28 @@
+spring:
+  jmx:
+    enabled: false
+  cloud:
+    gateway:
+      routes:
+        - id: sdrpi
+          uri: http://10.99.1.109:8080/
+          predicates:
+            - Path=/sdrpi/**
+          filters:
+            - RewritePath=/sdrpi/?(?<segment>.*), /$\{segment}
+        - id: office-window-cam
+          uri: http://10.99.1.152/
+          predicates:
+            - Path=/office-window-cam/**
+          filters:
+            - RewritePath=/office-window-cam/?(?<segment>.*), /$\{segment}
+        - id: spring-boot-native-pi
+          uri: http://spring-boot-native-pi.default.10.99.1.208.sslip.io
+          predicates:
+            - Path=/spring-boot-native-pi/**
+          filters:
+            - RewritePath=/spring-boot-native-pi/?(?<segment>.*), /$\{segment}
+management:
+  endpoint:
+    gateway:
+      enabled: true
