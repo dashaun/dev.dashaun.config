@@ -7,8 +7,3 @@ management:
     web:
       exposure:
         include: '*'
-
-spring:
-  messages:
-    basename: "messages,config.i18n.messages"
-    fallback-to-system-locale: true        
