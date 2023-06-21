@@ -1,1 +1,4 @@
 configurableproperty: configuredpropertyvalue
+management:
+  endpoints:
+    enabled-by-default: false
