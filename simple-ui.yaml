@@ -1,0 +1,2 @@
+about:
+  message: "This is the configured message from the config service -> git backed config"
