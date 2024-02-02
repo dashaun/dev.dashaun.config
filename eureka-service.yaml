@@ -6,7 +6,7 @@ eureka:
     hostname: peer1
   client:
     serviceUrl:
-      defaultZone: https://peer2/eureka/, https://peer3/eureka
+      defaultZone: http://peer2:8080/eureka/, http://peer3:8080/eureka
 
 ---
 spring:
@@ -16,7 +16,7 @@ eureka:
     hostname: peer2
   client:
     serviceUrl:
-      defaultZone: https://peer1/eureka/,https://peer3/eureka
+      defaultZone: http://peer1:8080/eureka/,http://peer3:8080/eureka
 
 ---
 spring:
@@ -26,4 +26,4 @@ eureka:
     hostname: peer3
   client:
     serviceUrl:
-      defaultZone: https://peer1/eureka/,https://peer2/eureka
+      defaultZone: http://peer1:8080/eureka/,http://peer2:8080/eureka
