@@ -1,31 +1,25 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: https://peer1/eureka/,http://peer2/eureka/,http://peer3/eureka/
+      defaultZone: http://peer1:8080/eureka/,http://peer2:8080/eureka/,http://peer3:8080/eureka/
 
 ---
 spring:
-  config:
-    active:
-      on-profile: peer1
+  profiles: peer1
 eureka:
   instance:
     hostname: peer1
 
 ---
 spring:
-  config:
-    active:
-      on-profile: peer2
+  profiles: peer2
 eureka:
   instance:
     hostname: peer2
 
 ---
 spring:
-  config:
-    active:
-      on-profile: peer3
+  profiles: peer3
 eureka:
   instance:
     hostname: peer3
