@@ -1,4 +1,6 @@
 eureka:
   client:
+    healthcheck:
+      enabled: true
     serviceUrl:
       defaultZone: http://peer1:8080/eureka/,http://peer2:8080/eureka/,http://peer3:8080/eureka/
