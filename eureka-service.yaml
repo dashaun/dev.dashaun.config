@@ -1,4 +1,6 @@
-
+eureka:
+  instance:
+    preferIpAddress: true
 
 ---
 spring:
@@ -9,8 +11,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://peer2:8080/eureka/,http://peer3:8080/eureka/
-  instance:
-    hostname: peer1
 
 ---
 spring:
@@ -21,8 +21,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://peer1:8080/eureka/,http://peer3:8080/eureka/
-  instance:
-    hostname: peer2
 
 ---
 spring:
@@ -33,5 +31,3 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://peer1:8080/eureka/,http://peer2:8080/eureka/
-  instance:
-    hostname: peer3
